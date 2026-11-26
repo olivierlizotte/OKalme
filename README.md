@@ -3,16 +3,24 @@
 Static site for OKalme — no framework, no build step. English by default, French via the EN/FR toggle (`?lang=fr`).
 
 ## Structure
-- `index.html` — the whole site (3×3 "ink map"; falls back to a normal scroll without JS)
-- `css/style.css` — palette from the family sigil
-- `js/i18n.js` — every UI string, EN + FR
-- `js/main.js` — map navigation, hash routing (`#/album`, `#/geared-spirit`, `#/workshop`, `#/journal`, `#/journal/<slug>`)
-- Blog posts: `<template id="post-<slug>-en|fr">` blocks at the bottom of `index.html`
-- `CNAME` (okalme.site), `.nojekyll`, `404.html`, `robots.txt`, `sitemap.xml`
+- `src/index.html` — template of the map page (EN text inline; `data-i18n` keys get translated at build)
+- `src/strings.json` — every UI string, EN + FR (source of `js/i18n.js`)
+- `posts/<slug>/` — one folder per story: `meta.json`, `en.html`, `fr.html`
+- `tools/build.py` — generates `index.html`, `fr/index.html`, `journal/<slug>/`, `fr/journal/<slug>/`, `sitemap.xml`, `robots.txt`, `llms.txt`, `js/i18n.js`
+- `css/style.css`, `js/main.js`, `assets/` — hand-written, not generated
 
-## Add a blog post
-1. Copy one `<template id="post-...-en">` / `-fr` pair, change the slug.
-2. Add a `.post-card` in the Journal section linking to `#/journal/<slug>` (+ its strings in `js/i18n.js`).
+**Always run `python3 tools/build.py` before committing.** Never edit generated files by hand.
+
+## Add a song story
+1. Copy `posts/what-will-you-trade/` to `posts/<song-slug>/`. The slug must match the cover file name in `assets/covers/` (and the `TRACKS` list in `tools/build.py`).
+2. Edit `meta.json` (track, duration, titles, SEO title, description, keywords, `about` = the manga) and write `en.html` / `fr.html` (body only: the title, eyebrow and cover are added by the build).
+3. Run the build: the track gets a “Story →” link on the album, a card in the Journal, its own EN/FR pages and sitemap entries.
+
+## Search engines & AI assistants
+- Each story is a real static page with canonical, hreflang, Open Graph and JSON-LD (BlogPosting + MusicRecording).
+- `robots.txt` explicitly allows Google, Bing, OpenAI, Anthropic, Perplexity and Apple crawlers; `llms.txt` summarizes the site for AI assistants.
+- Submit `https://okalme.site/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- Cloudflare: make sure AI crawlers are not blocked (Security / AI Crawl Control, "Block AI bots" and managed robots.txt).
 
 ## Deploy (GitHub Pages + Cloudflare)
 ```

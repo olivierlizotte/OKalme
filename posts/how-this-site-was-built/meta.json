@@ -1,0 +1,12 @@
+{
+ "slug": "how-this-site-was-built",
+ "date": "2026-11-25",
+ "updated": "2026-11-25",
+ "type": "note",
+ "image": "/assets/img/og.jpg",
+ "title": {"en": "How this site was built — and shipped", "fr": "Comment ce site a été créé — et mis en ligne"},
+ "seo_title": {"en": "How okalme.site was built and deployed on GitHub Pages | OKalme", "fr": "Comment okalme.site a été créé et déployé sur GitHub Pages | OKalme"},
+ "description": {"en": "A family sigil, a 3×3 ink map, a tiny build script and one GitHub Pages branch: how the OKalme website was designed, built with AI and deployed with Cloudflare.", "fr": "Un sigle familial, une carte à l'encre de 3×3, un petit script de génération et une branche GitHub Pages : comment le site d'OKalme a été conçu, construit avec l'I.A. et déployé avec Cloudflare."},
+ "excerpt": {"en": "A family sigil, a 3×3 ink map, zero frameworks and one GitHub Pages branch.", "fr": "Un sigle familial, une carte à l'encre de 3×3, zéro framework et une branche GitHub Pages."},
+ "keywords": {"en": "OKalme website, GitHub Pages, Cloudflare, static site, AI-assisted web design, Claude", "fr": "site OKalme, GitHub Pages, Cloudflare, site statique, conception web assistée par I.A., Claude"}
+}

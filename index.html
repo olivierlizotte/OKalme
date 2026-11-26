@@ -3,25 +3,320 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OKalme — Songs, games and stories, forged in ink and code</title>
-<meta name="description" content="OKalme is a family creative label: the album Through Their Eyes (coming soon), the upcoming game Geared Spirit, and notes on how it all gets made.">
+<title data-i18n="meta.title">OKalme — Manga-inspired songs, games and stories forged in ink and code</title>
+<meta name="description" content="OKalme is a family creative label: Through Their Eyes, Vol. 1, an album of twelve anime- and manga-inspired songs (coming soon), the upcoming game Geared Spirit, and behind-the-scenes stories for each song.">
+<meta name="keywords" content="anime songs, manga-inspired songs, anime fan songs, songs for manga fans, anime music album, J-rock, darksynth, AI-assisted music, Suno, Through Their Eyes, OKalme, Geared Spirit">
 <meta name="theme-color" content="#0b1620">
-<link rel="canonical" href="https://okalme.site/">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://okalme.site/">
-<meta property="og:title" content="OKalme">
-<meta property="og:description" content="Songs, games and stories, forged in ink and code. Through Their Eyes, Vol. 1 — coming soon.">
+<meta property="og:title" content="OKalme — Manga-inspired songs, games and stories forged in ink and code">
+<meta property="og:description" content="OKalme is a family creative label: Through Their Eyes, Vol. 1, an album of twelve anime- and manga-inspired songs (coming soon), the upcoming game Geared Spirit, and behind-the-scenes stories for each song.">
 <meta property="og:image" content="https://okalme.site/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/css/style.css">
 <script>document.documentElement.classList.add('js');</script>
+<link rel="canonical" href="https://okalme.site/">
+<link rel="alternate" hreflang="en" href="https://okalme.site/">
+<link rel="alternate" hreflang="fr" href="https://okalme.site/fr/">
+<link rel="alternate" hreflang="x-default" href="https://okalme.site/">
+<meta property="og:url" content="https://okalme.site/">
+<meta property="og:site_name" content="OKalme">
+<meta property="og:locale" content="en_CA">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MusicAlbum","name":"Through Their Eyes, Vol. 1","byArtist":{"@type":"MusicGroup","name":"OKalme"},"numTracks":12,"inLanguage":"en","url":"https://okalme.site/#/album"}
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://okalme.site/#website",
+   "name": "OKalme",
+   "url": "https://okalme.site/",
+   "inLanguage": [
+    "en",
+    "fr"
+   ],
+   "description": "OKalme is a family creative label: Through Their Eyes, Vol. 1, an album of twelve anime- and manga-inspired songs (coming soon), the upcoming game Geared Spirit, and behind-the-scenes stories for each song.",
+   "publisher": {
+    "@id": "https://okalme.site/#okalme"
+   }
+  },
+  {
+   "@type": "MusicGroup",
+   "@id": "https://okalme.site/#okalme",
+   "name": "OKalme",
+   "url": "https://okalme.site/",
+   "logo": "https://okalme.site/assets/img/sigil.png",
+   "description": "OKalme is a family creative label: Through Their Eyes, Vol. 1, an album of twelve anime- and manga-inspired songs (coming soon), the upcoming game Geared Spirit, and behind-the-scenes stories for each song.",
+   "genre": [
+    "Anime",
+    "Rock",
+    "Electronic"
+   ]
+  },
+  {
+   "@type": "VideoGame",
+   "name": "Geared Spirit",
+   "description": "An original game in the making by the OKalme family, with a soundtrack written in-house. Details are still being forged — and yes, there will be a boss.",
+   "author": {
+    "@id": "https://okalme.site/#okalme"
+   },
+   "url": "https://okalme.site/#/geared-spirit",
+   "gamePlatform": "TBA"
+  },
+  {
+   "@type": "Blog",
+   "name": "OKalme Journal",
+   "url": "https://okalme.site/#/journal",
+   "blogPost": [
+    {
+     "@type": "BlogPosting",
+     "headline": "What Will You Trade — the story behind the song",
+     "url": "https://okalme.site/journal/what-will-you-trade/",
+     "datePublished": "2026-11-25"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "How this site was built — and shipped",
+     "url": "https://okalme.site/journal/how-this-site-was-built/",
+     "datePublished": "2026-11-25"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MusicAlbum",
+ "@id": "https://okalme.site/#through-their-eyes",
+ "name": "Through Their Eyes, Vol. 1",
+ "byArtist": {
+  "@type": "MusicGroup",
+  "@id": "https://okalme.site/#okalme",
+  "name": "OKalme",
+  "url": "https://okalme.site/",
+  "logo": "https://okalme.site/assets/img/sigil.png"
+ },
+ "numTracks": 12,
+ "inLanguage": "en",
+ "genre": [
+  "Anime",
+  "Soundtrack",
+  "Rock",
+  "Electronic",
+  "J-rock",
+  "Darksynth"
+ ],
+ "description": "Every hero has a witness: a mentor, a rival, a partner, a guardian… even a cream puff. Each track tells a hero's story through the eyes of someone who watched them up close.",
+ "image": "https://okalme.site/assets/img/through-their-eyes.jpg",
+ "url": "https://okalme.site/#/album",
+ "albumProductionType": "https://schema.org/StudioAlbum",
+ "albumReleaseType": "https://schema.org/AlbumRelease",
+ "track": {
+  "@type": "ItemList",
+  "numberOfItems": 12,
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "What Will You Trade",
+     "duration": "PT4M19S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     },
+     "url": "https://okalme.site/journal/what-will-you-trade/"
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "The Other Hand",
+     "duration": "PT3M55S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Feel It In Your Guts",
+     "duration": "PT4M19S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 4,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Heads, Little Butterfly",
+     "duration": "PT2M37S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 5,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Buffed by Cream Puffs",
+     "duration": "PT3M31S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 6,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Fast Asleep",
+     "duration": "PT3M19S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 7,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "What Do You Play For",
+     "duration": "PT4M4S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 8,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "By My Side",
+     "duration": "PT3M22S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 9,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Thorn Princess",
+     "duration": "PT4M2S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 10,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "We Are Here",
+     "duration": "PT4M0S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 11,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "One and Done",
+     "duration": "PT3M10S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   },
+   {
+    "@type": "ListItem",
+    "position": 12,
+    "item": {
+     "@type": "MusicRecording",
+     "name": "Return to Me",
+     "duration": "PT3M27S",
+     "byArtist": {
+      "@type": "MusicGroup",
+      "@id": "https://okalme.site/#okalme",
+      "name": "OKalme",
+      "url": "https://okalme.site/",
+      "logo": "https://okalme.site/assets/img/sigil.png"
+     }
+    }
+   }
+  ]
+ }
+}
 </script>
 </head>
 <body>
@@ -30,12 +325,12 @@
 <!-- ===== Fixed UI ===== -->
 <header class="ui-top">
   <a class="brand" href="#/" aria-label="OKalme — home">
-    <img src="assets/img/favicon.png" alt="" width="34" height="34">
+    <img src="/assets/img/favicon.png" alt="" width="34" height="34">
     <span>OKalme</span>
   </a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+  <div class="lang" role="group" data-i18n-aria="ui.language" aria-label="Language">
+    <a href="/" hreflang="en" lang="en" data-lang="en" aria-current="true">EN</a>
+    <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">FR</a>
   </div>
 </header>
 
@@ -44,7 +339,7 @@
   <button type="button" class="c-e" data-go="album" aria-label="Through Their Eyes"><span>E</span></button>
   <button type="button" class="c-s" data-go="workshop" aria-label="The Workshop"><span>S</span></button>
   <button type="button" class="c-w" data-go="journal" aria-label="Journal"><span>W</span></button>
-  <button type="button" class="c-c" data-go="hub" aria-label="Home"><img src="assets/img/favicon.png" alt=""></button>
+  <button type="button" class="c-c" data-go="hub" aria-label="Home"><img src="/assets/img/favicon.png" alt=""></button>
   <div class="c-label" aria-live="polite"></div>
 </nav>
 <button type="button" class="map-btn" data-i18n="ui.map" aria-keyshortcuts="M">Map</button>
@@ -67,7 +362,7 @@
     <div class="sun" aria-hidden="true"></div>
     <div class="hub-inner">
       <div class="sigil-wrap">
-        <img class="sigil" src="assets/img/sigil.png" alt="OKalme family sigil: a tree and a sword before a rising sun" width="640" height="415">
+        <img class="sigil" src="/assets/img/sigil.png" alt="OKalme family sigil: a tree and a sword before a rising sun" width="640" height="415">
       </div>
       <h1 id="hub-title" class="visually-hidden">OKalme</h1>
       <p class="tagline" data-i18n="hub.tagline">Songs, games and stories — forged in ink and code.</p>
@@ -85,7 +380,7 @@
       <div class="album-grid">
         <div class="album-frame">
           <div class="frame" id="frame">
-            <img id="frame-img" src="assets/img/through-their-eyes.jpg" alt="Through Their Eyes, Vol. 1 — album cover" width="1400" height="1400">
+            <img id="frame-img" src="/assets/img/through-their-eyes.jpg" alt="Through Their Eyes, Vol. 1 — album cover" width="1400" height="1400">
             <span class="stamp" data-i18n="album.soon">Coming soon</span>
           </div>
           <p class="frame-cap" id="frame-cap">Through Their Eyes, Vol. 1</p>
@@ -94,10 +389,11 @@
           <p class="eyebrow" data-i18n="album.eyebrow">Album · 12 tracks · 44:12</p>
           <h2 id="album-title">Through Their Eyes <em>Vol. 1</em></h2>
           <p class="lead" data-i18n="album.lead">Twelve songs for manga fans.</p>
-          <p data-i18n="album.p1">Every hero has a witness: a mentor, a rival, a partner, a guardian… even a cream puff. Each track tells a hero's story through the eyes of someone who watched them up close.</p>
-          <p class="guess" data-i18n="album.guess">Guess the manga. Guess the hero. Guess who's singing.</p>
+          <p data-i18n="album.p1">Every hero has a witness: a mentor, a rival, a partner, a guardian… even a cream puff. Each track tells a hero&#x27;s story through the eyes of someone who watched them up close.</p>
+          <p class="guess" data-i18n="album.guess">Guess the manga. Guess the hero. Guess who&#x27;s singing.</p>
+          <p class="genres" data-i18n="album.genres">Anime- and manga-inspired songs · cinematic electro-pop, J-rock, darksynth, dark boogie</p>
           <ol class="tracks" id="tracks">
-            <li><button type="button" data-cover="what-will-you-trade">What Will You Trade<span>4:19</span></button></li>
+            <li><button type="button" data-cover="what-will-you-trade">What Will You Trade<span>4:19</span></button><a class="story" href="/journal/what-will-you-trade/" data-post="what-will-you-trade" title="Read the story behind this song">Story →</a></li>
             <li><button type="button" data-cover="the-other-hand">The Other Hand<span>3:55</span></button></li>
             <li><button type="button" data-cover="feel-it-in-your-guts">Feel It In Your Guts<span>4:19</span></button></li>
             <li><button type="button" data-cover="heads-little-butterfly">Heads, Little Butterfly<span>2:37</span></button></li>
@@ -114,13 +410,13 @@
             <span class="chip off">Spotify</span><span class="chip off">Apple Music</span><span class="chip off">YouTube</span>
             <span class="chip-note" data-i18n="album.platforms">Links appear on release day.</span>
           </div>
-          <p class="disclosure" data-i18n="album.ai">Lyrics written by OKalme. Music and voices generated with Suno — we'd rather tell you than have you guess (that's a different game).</p>
+          <p class="disclosure" data-i18n="album.ai">Lyrics written by OKalme. Music and voices generated with Suno — we&#x27;d rather tell you than have you guess (that&#x27;s a different game).</p>
           <div class="vol2">
             <p class="eyebrow" data-i18n="album.vol2">Vol. 2 — already in the ink</p>
             <div class="vol2-row">
-              <img src="assets/covers/arise.jpg" alt="Arise" loading="lazy" width="720" height="720">
-              <img src="assets/covers/mad-dog.jpg" alt="Mad Dog" loading="lazy" width="720" height="720">
-              <img src="assets/covers/leafless-clover.jpg" alt="Leafless Clover" loading="lazy" width="720" height="720">
+              <img src="/assets/covers/arise.jpg" alt="Arise" loading="lazy" width="720" height="720">
+              <img src="/assets/covers/mad-dog.jpg" alt="Mad Dog" loading="lazy" width="720" height="720">
+              <img src="/assets/covers/leafless-clover.jpg" alt="Leafless Clover" loading="lazy" width="720" height="720">
             </div>
           </div>
         </div>
@@ -147,7 +443,7 @@
         <div class="game-text">
           <p class="eyebrow" data-i18n="game.eyebrow">Upcoming game · In development</p>
           <h2 id="game-title">Geared Spirit</h2>
-          <p class="lead" data-i18n="game.lead">Geared for war — but it's spirit that wins.</p>
+          <p class="lead" data-i18n="game.lead">Geared for war — but it&#x27;s spirit that wins.</p>
           <p data-i18n="game.p1">An original game in the making by the OKalme family, with a soundtrack written in-house. Details are still being forged — and yes, there will be a boss.</p>
           <ul class="facts">
             <li><span data-i18n="game.f1k">Status</span><b data-i18n="game.f1v">In development</b></li>
@@ -171,7 +467,7 @@
         <article class="bench empty"><span class="num">02</span><h3 data-i18n="ws.b2">Composing with Suno</h3><p data-i18n="ws.soon">Coming soon</p></article>
         <article class="bench empty"><span class="num">03</span><h3 data-i18n="ws.b3">Ink &amp; glitch artwork</h3><p data-i18n="ws.soon">Coming soon</p></article>
         <article class="bench empty"><span class="num">04</span><h3 data-i18n="ws.b4">Game design</h3><p data-i18n="ws.soon">Coming soon</p></article>
-        <a class="bench" href="#/journal/how-this-site-was-built"><span class="num">05</span><h3 data-i18n="ws.b5">Code &amp; deploy</h3><p data-i18n="ws.read">Read the first note →</p></a>
+        <a class="bench" href="/journal/how-this-site-was-built/" data-post="how-this-site-was-built"><span class="num">05</span><h3 data-i18n="ws.b5">Code &amp; deploy</h3><p data-i18n="ws.read">Read the first note →</p></a>
       </div>
     </div>
   </section>
@@ -182,13 +478,19 @@
       <p class="eyebrow" data-i18n="j.eyebrow">Notes from the workshop</p>
       <h2 id="j-title" data-i18n="j.title">Journal</h2>
       <div class="posts">
-        <a class="post-card" href="#/journal/how-this-site-was-built">
-          <time datetime="2026-11-25" data-i18n="post1.date">November 25, 2026</time>
-          <h3 data-i18n="post1.title">How this site was built — and shipped</h3>
-          <p data-i18n="post1.excerpt">A family sigil, a 3×3 ink map, zero frameworks and one GitHub Pages branch.</p>
+        <a class="post-card song" href="/journal/what-will-you-trade/" data-post="what-will-you-trade">
+          <time datetime="2026-11-25">Song story · November 25, 2026</time>
+          <h3>What Will You Trade — the story behind the song</h3>
+          <p>Two brothers, one Gate and the price of equivalent exchange — told by the one who collected it.</p>
           <span class="more" data-i18n="j.read">Unroll the scroll →</span>
         </a>
-        <div class="post-card ghost"><h3 data-i18n="j.next">Next: the making of Through Their Eyes</h3><p data-i18n="ws.soon">Coming soon</p></div>
+        <a class="post-card" href="/journal/how-this-site-was-built/" data-post="how-this-site-was-built">
+          <time datetime="2026-11-25">Workshop note · November 25, 2026</time>
+          <h3>How this site was built — and shipped</h3>
+          <p>A family sigil, a 3×3 ink map, zero frameworks and one GitHub Pages branch.</p>
+          <span class="more" data-i18n="j.read">Unroll the scroll →</span>
+        </a>
+        <div class="post-card ghost"><h3>Next: the making of Through Their Eyes</h3><p>Coming soon</p></div>
       </div>
     </div>
   </section>
@@ -201,89 +503,14 @@
 <div class="reader" id="reader" hidden role="dialog" aria-modal="true" aria-labelledby="reader-title">
   <div class="scroll-paper">
     <button type="button" class="reader-close" aria-label="Close">×</button>
-    <article id="reader-body"></article>
+    <article id="reader-body" class="post-body"></article>
   </div>
 </div>
 
-<!-- Post content (also readable without JS) -->
-<template id="post-how-this-site-was-built-en">
-  <p class="eyebrow">Journal · November 25, 2026</p>
-  <h1 id="reader-title">How this site was built — and shipped</h1>
-  <p class="lead">OKalme is our family's creative label. It needed a home for an album, a game and the story of how we make things. Here's how that home was drawn, coded and put online.</p>
-  <h2>1. The palette came from the family sigil</h2>
-  <p>Everything starts from the OKalme sigil: ink navy, sun gold, ember orange, two greens and the white of the mosaic letters. The album covers added the rest of the vocabulary — rice paper, brushed ink and a little digital glitch. Old tools, new tools. That's pretty much the whole brand.</p>
-  <h2>2. No top-down page: an ink map</h2>
-  <p>The site is a 3×3 world and you are the camera. The sigil is the sun in the middle; every project sits in a direction: the album to the east, the game to the north, the workshop to the south, this journal to the west. Travel with the arrows, WASD, a swipe or the compass, and press <kbd>M</kbd> to zoom out and see the whole map.</p>
-  <p>Without JavaScript, the same page falls back to a classic scroll — friendly for search engines, screen readers and grumpy browsers.</p>
-  <h2>3. A deliberately boring stack</h2>
-  <ul>
-    <li>One HTML file, one CSS file, two small JavaScript files, a folder of images. No framework, no build step.</li>
-    <li>Routes live in the URL hash (<code>#/album</code>), so GitHub Pages never has to serve a deep link it doesn't know.</li>
-    <li>English by default, French one click away: every string sits in a small dictionary.</li>
-  </ul>
-  <h2>4. Built with AI, directed by a human</h2>
-  <p>The code was drafted in a conversation with Claude. I described what I wanted, it proposed, I corrected — mostly by saying “more orange”. Same rule as for the music: we'd rather tell you how it's made than let you guess.</p>
-  <h2>5. Shipping it</h2>
-<pre><code># 1. Publish the files on a gh-pages branch
-git init && git checkout -b gh-pages
-git add . && git commit -m "OKalme v0"
-git remote add origin git@github.com:olivierlizotte/okalme.git
-git push -u origin gh-pages
 
-# 2. GitHub › Settings › Pages
-#    Source: gh-pages / (root) — custom domain: okalme.site
-#    (the CNAME file is already in the repo) — tick “Enforce HTTPS”
-
-# 3. Cloudflare › DNS for okalme.site
-#    A  @    185.199.108.153   (also .109, .110, .111)
-#    CNAME www  olivierlizotte.github.io
-#    Keep “DNS only” until GitHub issues the certificate,
-#    then SSL/TLS mode: Full</code></pre>
-  <p>That's it: push to <code>gh-pages</code> and the site updates a minute later.</p>
-  <h2>What's next</h2>
-  <p>The album release, the first Geared Spirit devlog, and real notes in the Workshop. See you on the map.</p>
-</template>
-
-<template id="post-how-this-site-was-built-fr">
-  <p class="eyebrow">Journal · 25 novembre 2026</p>
-  <h1 id="reader-title">Comment ce site a été créé — et mis en ligne</h1>
-  <p class="lead">OKalme, c'est l'étiquette créative de notre famille. Il lui fallait une maison pour un album, un jeu et l'histoire de notre façon de créer. Voici comment cette maison a été dessinée, codée et mise en ligne.</p>
-  <h2>1. La palette vient du sigle familial</h2>
-  <p>Tout part du sigle d'OKalme : bleu encre, or soleil, orange braise, deux verts et le blanc des lettres en mosaïque. Les pochettes d'album ont complété le vocabulaire : papier de riz, encre au pinceau et un soupçon de glitch numérique. Des outils anciens, des outils nouveaux. C'est à peu près toute la marque.</p>
-  <h2>2. Pas de page de haut en bas : une carte à l'encre</h2>
-  <p>Le site est un monde de 3×3 cases et vous êtes la caméra. Le sigle est le soleil au centre; chaque projet est dans une direction : l'album à l'est, le jeu au nord, l'atelier au sud, ce journal à l'ouest. On voyage avec les flèches, WASD, un glissement du doigt ou la boussole, et la touche <kbd>M</kbd> fait un zoom arrière sur toute la carte.</p>
-  <p>Sans JavaScript, la même page redevient un défilement classique — pratique pour les moteurs de recherche, les lecteurs d'écran et les navigateurs grognons.</p>
-  <h2>3. Une pile techno volontairement ennuyante</h2>
-  <ul>
-    <li>Un fichier HTML, un CSS, deux petits fichiers JavaScript et un dossier d'images. Aucun framework, aucune étape de compilation.</li>
-    <li>Les routes vivent dans le dièse de l'URL (<code>#/album</code>) : GitHub Pages n'a jamais à servir un lien profond qu'il ne connaît pas.</li>
-    <li>Anglais par défaut, français à un clic : chaque texte vit dans un petit dictionnaire.</li>
-  </ul>
-  <h2>4. Fait avec l'I.A., dirigé par un humain</h2>
-  <p>Le code a été rédigé dans une conversation avec Claude. Je décrivais, il proposait, je corrigeais — surtout en disant « plus d'orange ». Même règle que pour la musique : on préfère vous dire comment c'est fait plutôt que de vous laisser deviner.</p>
-  <h2>5. La mise en ligne</h2>
-<pre><code># 1. Publier les fichiers sur une branche gh-pages
-git init && git checkout -b gh-pages
-git add . && git commit -m "OKalme v0"
-git remote add origin git@github.com:olivierlizotte/okalme.git
-git push -u origin gh-pages
-
-# 2. GitHub › Settings › Pages
-#    Source : gh-pages / (root) — domaine : okalme.site
-#    (le fichier CNAME est déjà dans le dépôt) — cocher « Enforce HTTPS »
-
-# 3. Cloudflare › DNS de okalme.site
-#    A  @    185.199.108.153   (aussi .109, .110, .111)
-#    CNAME www  olivierlizotte.github.io
-#    Garder « DNS only » jusqu'à ce que GitHub émette le certificat,
-#    puis mode SSL/TLS : Full</code></pre>
-  <p>C'est tout : un push sur <code>gh-pages</code> et le site se met à jour une minute plus tard.</p>
-  <h2>La suite</h2>
-  <p>La sortie de l'album, le premier journal de développement de Geared Spirit et de vraies notes dans l'Atelier. On se revoit sur la carte.</p>
-</template>
 
 <noscript><style>.compass,.map-btn,.hint,.reader{display:none!important}</style></noscript>
-<script src="js/i18n.js"></script>
-<script src="js/main.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

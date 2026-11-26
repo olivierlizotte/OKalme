@@ -1,0 +1,33 @@
+  <p class="lead">OKalme, c'est l'étiquette créative de notre famille. Il lui fallait une maison pour un album, un jeu et l'histoire de notre façon de créer. Voici comment cette maison a été dessinée, codée et mise en ligne.</p>
+  <h2>1. La palette vient du sigle familial</h2>
+  <p>Tout part du sigle d'OKalme : bleu encre, or soleil, orange braise, deux verts et le blanc des lettres en mosaïque. Les pochettes d'album ont complété le vocabulaire : papier de riz, encre au pinceau et un soupçon de glitch numérique. Des outils anciens, des outils nouveaux. C'est à peu près toute la marque.</p>
+  <h2>2. Pas de page de haut en bas : une carte à l'encre</h2>
+  <p>Le site est un monde de 3×3 cases et vous êtes la caméra. Le sigle est le soleil au centre; chaque projet est dans une direction : l'album à l'est, le jeu au nord, l'atelier au sud, ce journal à l'ouest. On voyage avec les flèches, WASD, un glissement du doigt ou la boussole, et la touche <kbd>M</kbd> fait un zoom arrière sur toute la carte.</p>
+  <p>Sans JavaScript, la même page redevient un défilement classique — pratique pour les moteurs de recherche, les lecteurs d'écran et les navigateurs grognons.</p>
+  <h2>3. Une pile techno volontairement ennuyante</h2>
+  <ul>
+    <li>Une page, un CSS, deux petits fichiers JavaScript et un dossier d'images. Aucun framework. Un minuscule script Python transforme chaque histoire en page à part entière, dans les deux langues, pour que les moteurs de recherche et les assistants I.A. puissent toutes les lire.</li>
+    <li>Sur la carte, les lieux vivent dans le dièse de l'URL (<code>#/album</code>); chaque histoire a aussi une vraie adresse, comme <code>/fr/journal/how-this-site-was-built/</code>.</li>
+    <li>Anglais par défaut, français à un clic : chaque texte vit dans un petit dictionnaire.</li>
+  </ul>
+  <h2>4. Fait avec l'I.A., dirigé par un humain</h2>
+  <p>Le code a été rédigé dans une conversation avec Claude. Je décrivais, il proposait, je corrigeais — surtout en disant « plus d'orange ». Même règle que pour la musique : on préfère vous dire comment c'est fait plutôt que de vous laisser deviner.</p>
+  <h2>5. La mise en ligne</h2>
+<pre><code># 1. Publier les fichiers sur une branche gh-pages
+git init && git checkout -b gh-pages
+git add . && git commit -m "OKalme v0"
+git remote add origin git@github.com:olivierlizotte/okalme.git
+git push -u origin gh-pages
+
+# 2. GitHub › Settings › Pages
+#    Source : gh-pages / (root) — domaine : okalme.site
+#    (le fichier CNAME est déjà dans le dépôt) — cocher « Enforce HTTPS »
+
+# 3. Cloudflare › DNS de okalme.site
+#    A  @    185.199.108.153   (aussi .109, .110, .111)
+#    CNAME www  olivierlizotte.github.io
+#    Garder « DNS only » jusqu'à ce que GitHub émette le certificat,
+#    puis mode SSL/TLS : Full</code></pre>
+  <p>C'est tout : un push sur <code>gh-pages</code> et le site se met à jour une minute plus tard.</p>
+  <h2>La suite</h2>
+  <p>La sortie de l'album, le premier journal de développement de Geared Spirit et de vraies notes dans l'Atelier. On se revoit sur la carte.</p>

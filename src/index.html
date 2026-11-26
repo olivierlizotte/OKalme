@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="meta.title">OKalme</title>
+<meta name="description" content="{{meta.description}}">
+<meta name="keywords" content="{{meta.keywords}}">
+<meta name="theme-color" content="#0b1620">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:description" content="{{meta.description}}">
+<meta property="og:image" content="https://okalme.site/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+<!--HEAD-->
+</head>
+<body>
+<a class="skip" href="#hub" data-i18n="ui.skip">Skip to content</a>
+
+<!-- ===== Fixed UI ===== -->
+<header class="ui-top">
+  <a class="brand" href="#/" aria-label="OKalme — home">
+    <img src="/assets/img/favicon.png" alt="" width="34" height="34">
+    <span>OKalme</span>
+  </a>
+  <div class="lang" role="group" data-i18n-aria="ui.language" aria-label="Language">
+    <a href="/" hreflang="en" lang="en" data-lang="en">EN</a>
+    <a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">FR</a>
+  </div>
+</header>
+
+<nav class="compass" aria-label="Travel">
+  <button type="button" class="c-n" data-go="game" aria-label="Geared Spirit"><span>N</span></button>
+  <button type="button" class="c-e" data-go="album" aria-label="Through Their Eyes"><span>E</span></button>
+  <button type="button" class="c-s" data-go="workshop" aria-label="The Workshop"><span>S</span></button>
+  <button type="button" class="c-w" data-go="journal" aria-label="Journal"><span>W</span></button>
+  <button type="button" class="c-c" data-go="hub" aria-label="Home"><img src="/assets/img/favicon.png" alt=""></button>
+  <div class="c-label" aria-live="polite"></div>
+</nav>
+<button type="button" class="map-btn" data-i18n="ui.map" aria-keyshortcuts="M">Map</button>
+<p class="hint" data-i18n="ui.hint">Arrows · WASD · swipe — M for the map</p>
+
+<!-- ===== The world: a 3×3 ink map ===== -->
+<div class="viewport" id="viewport">
+<div class="camera" id="camera">
+<main class="world" id="world">
+
+  <svg class="paths" aria-hidden="true" viewBox="0 0 300 300" preserveAspectRatio="none">
+    <path d="M150 150 C 170 120, 210 160, 250 150" />
+    <path d="M150 150 C 130 180, 90 140, 50 150" />
+    <path d="M150 150 C 120 130, 170 90, 150 50" />
+    <path d="M150 150 C 180 170, 130 210, 150 250" />
+  </svg>
+
+  <!-- HUB (center) -->
+  <section class="cell cell-hub" id="hub" data-cell="hub" data-x="1" data-y="1" aria-labelledby="hub-title">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hub-inner">
+      <div class="sigil-wrap">
+        <img class="sigil" src="/assets/img/sigil.png" alt="OKalme family sigil: a tree and a sword before a rising sun" width="640" height="415">
+      </div>
+      <h1 id="hub-title" class="visually-hidden">OKalme</h1>
+      <p class="tagline" data-i18n="hub.tagline">Songs, games and stories — forged in ink and code.</p>
+      <p class="sub" data-i18n="hub.sub">A family creative label. Pick a direction.</p>
+    </div>
+    <a class="dir dir-n" href="#/geared-spirit"><span class="arrow">↑</span><span data-i18n="dir.game">Geared Spirit</span></a>
+    <a class="dir dir-e" href="#/album"><span data-i18n="dir.album">Through Their Eyes</span><span class="arrow">→</span></a>
+    <a class="dir dir-s" href="#/workshop"><span class="arrow">↓</span><span data-i18n="dir.workshop">The Workshop</span></a>
+    <a class="dir dir-w" href="#/journal"><span class="arrow">←</span><span data-i18n="dir.journal">Journal</span></a>
+  </section>
+
+  <!-- ALBUM (east) -->
+  <section class="cell cell-album paper" id="album" data-cell="album" data-x="2" data-y="1" aria-labelledby="album-title">
+    <div class="cell-scroll">
+      <div class="album-grid">
+        <div class="album-frame">
+          <div class="frame" id="frame">
+            <img id="frame-img" src="/assets/img/through-their-eyes.jpg" alt="Through Their Eyes, Vol. 1 — album cover" width="1400" height="1400">
+            <span class="stamp" data-i18n="album.soon">Coming soon</span>
+          </div>
+          <p class="frame-cap" id="frame-cap">Through Their Eyes, Vol. 1</p>
+        </div>
+        <div class="album-text">
+          <p class="eyebrow" data-i18n="album.eyebrow">Album · 12 tracks · 44:12</p>
+          <h2 id="album-title">Through Their Eyes <em>Vol. 1</em></h2>
+          <p class="lead" data-i18n="album.lead">Twelve songs for manga fans.</p>
+          <p data-i18n="album.p1">Every hero has a witness: a mentor, a rival, a partner, a guardian… even a cream puff. Each track tells a hero's story through the eyes of someone who watched them up close.</p>
+          <p class="guess" data-i18n="album.guess">Guess the manga. Guess the hero. Guess who's singing.</p>
+          <p class="genres" data-i18n="album.genres">Anime- and manga-inspired songs · cinematic electro-pop, J-rock, darksynth, dark boogie</p>
+          <ol class="tracks" id="tracks">
+            <li><button type="button" data-cover="what-will-you-trade">What Will You Trade<span>4:19</span></button></li>
+            <li><button type="button" data-cover="the-other-hand">The Other Hand<span>3:55</span></button></li>
+            <li><button type="button" data-cover="feel-it-in-your-guts">Feel It In Your Guts<span>4:19</span></button></li>
+            <li><button type="button" data-cover="heads-little-butterfly">Heads, Little Butterfly<span>2:37</span></button></li>
+            <li><button type="button" data-cover="buffed-by-cream-puffs">Buffed by Cream Puffs<span>3:31</span></button></li>
+            <li><button type="button" data-cover="fast-asleep">Fast Asleep<span>3:19</span></button></li>
+            <li><button type="button" data-cover="what-do-you-play-for">What Do You Play For<span>4:04</span></button></li>
+            <li><button type="button" data-cover="by-my-side">By My Side<span>3:22</span></button></li>
+            <li><button type="button" data-cover="thorn-princess">Thorn Princess<span>4:02</span></button></li>
+            <li><button type="button" data-cover="we-are-here">We Are Here<span>4:00</span></button></li>
+            <li><button type="button" data-cover="one-and-done">One and Done<span>3:10</span></button></li>
+            <li><button type="button" data-cover="return-to-me">Return to Me<span>3:27</span></button></li>
+          </ol>
+          <div class="platforms" aria-label="Streaming platforms">
+            <span class="chip off">Spotify</span><span class="chip off">Apple Music</span><span class="chip off">YouTube</span>
+            <span class="chip-note" data-i18n="album.platforms">Links appear on release day.</span>
+          </div>
+          <p class="disclosure" data-i18n="album.ai">Lyrics written by OKalme. Music and voices generated with Suno — we'd rather tell you than have you guess (that's a different game).</p>
+          <div class="vol2">
+            <p class="eyebrow" data-i18n="album.vol2">Vol. 2 — already in the ink</p>
+            <div class="vol2-row">
+              <img src="/assets/covers/arise.jpg" alt="Arise" loading="lazy" width="720" height="720">
+              <img src="/assets/covers/mad-dog.jpg" alt="Mad Dog" loading="lazy" width="720" height="720">
+              <img src="/assets/covers/leafless-clover.jpg" alt="Leafless Clover" loading="lazy" width="720" height="720">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEARED SPIRIT (north) -->
+  <section class="cell cell-game" id="geared-spirit" data-cell="game" data-x="1" data-y="0" aria-labelledby="game-title">
+    <div class="cell-scroll">
+      <div class="game-grid">
+        <div class="gears" aria-hidden="true">
+          <svg viewBox="0 0 400 400">
+            <defs>
+              <radialGradient id="flame" cx="50%" cy="60%" r="50%">
+                <stop offset="0" stop-color="#fff6c9"/><stop offset=".45" stop-color="#fec648"/><stop offset="1" stop-color="#e8481c" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <g id="gearA" class="gear"><path d=""/><circle r="34"/></g>
+            <g id="gearB" class="gear gear-b"><path d=""/><circle r="22"/></g>
+            <g class="spirit"><ellipse cx="200" cy="205" rx="46" ry="62" fill="url(#flame)"/></g>
+          </svg>
+        </div>
+        <div class="game-text">
+          <p class="eyebrow" data-i18n="game.eyebrow">Upcoming game · In development</p>
+          <h2 id="game-title">Geared Spirit</h2>
+          <p class="lead" data-i18n="game.lead">Geared for war — but it's spirit that wins.</p>
+          <p data-i18n="game.p1">An original game in the making by the OKalme family, with a soundtrack written in-house. Details are still being forged — and yes, there will be a boss.</p>
+          <ul class="facts">
+            <li><span data-i18n="game.f1k">Status</span><b data-i18n="game.f1v">In development</b></li>
+            <li><span data-i18n="game.f2k">Platforms</span><b data-i18n="game.f2v">To be announced</b></li>
+            <li><span data-i18n="game.f3k">Soundtrack</span><b data-i18n="game.f3v">In progress</b></li>
+          </ul>
+          <p class="muted" data-i18n="game.devlog">Devlog entries will appear in the Journal. Move your cursor: the gears are listening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOP (south) -->
+  <section class="cell cell-workshop paper" id="workshop" data-cell="workshop" data-x="1" data-y="2" aria-labelledby="ws-title">
+    <div class="cell-scroll">
+      <p class="eyebrow" data-i18n="ws.eyebrow">Creative process</p>
+      <h2 id="ws-title" data-i18n="ws.title">The Workshop</h2>
+      <p class="lead" data-i18n="ws.lead">How these projects get made — writing, composing, drawing, coding. The bench is set up; the notes are coming.</p>
+      <div class="benches">
+        <article class="bench empty"><span class="num">01</span><h3 data-i18n="ws.b1">Story &amp; lyrics</h3><p data-i18n="ws.soon">Coming soon</p></article>
+        <article class="bench empty"><span class="num">02</span><h3 data-i18n="ws.b2">Composing with Suno</h3><p data-i18n="ws.soon">Coming soon</p></article>
+        <article class="bench empty"><span class="num">03</span><h3 data-i18n="ws.b3">Ink &amp; glitch artwork</h3><p data-i18n="ws.soon">Coming soon</p></article>
+        <article class="bench empty"><span class="num">04</span><h3 data-i18n="ws.b4">Game design</h3><p data-i18n="ws.soon">Coming soon</p></article>
+        <a class="bench" href="#/journal/how-this-site-was-built"><span class="num">05</span><h3 data-i18n="ws.b5">Code &amp; deploy</h3><p data-i18n="ws.read">Read the first note →</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL (west) -->
+  <section class="cell cell-journal paper" id="journal" data-cell="journal" data-x="0" data-y="1" aria-labelledby="j-title">
+    <div class="cell-scroll">
+      <p class="eyebrow" data-i18n="j.eyebrow">Notes from the workshop</p>
+      <h2 id="j-title" data-i18n="j.title">Journal</h2>
+      <div class="posts">
+<!--POSTS-->
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+</div>
+
+<!-- ===== Post reader (unrolling scroll) ===== -->
+<div class="reader" id="reader" hidden role="dialog" aria-modal="true" aria-labelledby="reader-title">
+  <div class="scroll-paper">
+    <button type="button" class="reader-close" aria-label="Close">×</button>
+    <article id="reader-body" class="post-body"></article>
+  </div>
+</div>
+
+
+
+<noscript><style>.compass,.map-btn,.hint,.reader{display:none!important}</style></noscript>
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

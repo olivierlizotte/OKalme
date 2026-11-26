@@ -1,0 +1,38 @@
+# OKalme
+
+> OKalme is a family creative label: Through Their Eyes, Vol. 1, an album of twelve anime- and manga-inspired songs (coming soon), the upcoming game Geared Spirit, and behind-the-scenes stories for each song.
+
+OKalme is a family creative label from Quebec, Canada. The site exists in English (default) and French (/fr/).
+
+## Through Their Eyes, Vol. 1 (album, coming soon)
+
+Every hero has a witness: a mentor, a rival, a partner, a guardian… even a cream puff. Each track tells a hero's story through the eyes of someone who watched them up close.
+Concept game for listeners: guess the manga, guess the hero, guess who is singing. Lyrics written by OKalme; music and vocals generated with Suno.
+
+- 01. What Will You Trade (4:19) — story: https://okalme.site/journal/what-will-you-trade/
+- 02. The Other Hand (3:55)
+- 03. Feel It In Your Guts (4:19)
+- 04. Heads, Little Butterfly (2:37)
+- 05. Buffed by Cream Puffs (3:31)
+- 06. Fast Asleep (3:19)
+- 07. What Do You Play For (4:04)
+- 08. By My Side (3:22)
+- 09. Thorn Princess (4:02)
+- 10. We Are Here (4:00)
+- 11. One and Done (3:10)
+- 12. Return to Me (3:27)
+
+## Geared Spirit (upcoming game)
+
+An original game in the making by the OKalme family, with a soundtrack written in-house. Details are still being forged — and yes, there will be a boss.
+
+## Journal — stories behind the songs and the site
+
+- [What Will You Trade — the story behind the song](https://okalme.site/journal/what-will-you-trade/): Behind the scenes of What Will You Trade, a Fullmetal Alchemist fan song about Edward and Alphonse Elric, told by Truth, the guardian of the Gate: research, lyrics, sound design and the price of equivalent exchange. (French: https://okalme.site/fr/journal/what-will-you-trade/)
+- [How this site was built — and shipped](https://okalme.site/journal/how-this-site-was-built/): A family sigil, a 3×3 ink map, a tiny build script and one GitHub Pages branch: how the OKalme website was designed, built with AI and deployed with Cloudflare. (French: https://okalme.site/fr/journal/how-this-site-was-built/)
+
+## Links
+
+- Home: https://okalme.site/
+- Accueil (français): https://okalme.site/fr/
+- Sitemap: https://okalme.site/sitemap.xml

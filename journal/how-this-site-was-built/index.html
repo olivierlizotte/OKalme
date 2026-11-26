@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How okalme.site was built and deployed on GitHub Pages | OKalme</title>
+<meta name="description" content="A family sigil, a 3×3 ink map, a tiny build script and one GitHub Pages branch: how the OKalme website was designed, built with AI and deployed with Cloudflare.">
+<meta name="keywords" content="OKalme website, GitHub Pages, Cloudflare, static site, AI-assisted web design, Claude">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1620">
+<link rel="canonical" href="https://okalme.site/journal/how-this-site-was-built/">
+<link rel="alternate" hreflang="en" href="https://okalme.site/journal/how-this-site-was-built/">
+<link rel="alternate" hreflang="fr" href="https://okalme.site/fr/journal/how-this-site-was-built/">
+<link rel="alternate" hreflang="x-default" href="https://okalme.site/journal/how-this-site-was-built/">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OKalme">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://okalme.site/journal/how-this-site-was-built/">
+<meta property="og:title" content="How this site was built — and shipped">
+<meta property="og:description" content="A family sigil, a 3×3 ink map, a tiny build script and one GitHub Pages branch: how the OKalme website was designed, built with AI and deployed with Cloudflare.">
+<meta property="og:image" content="https://okalme.site/assets/img/og.jpg">
+<meta property="article:published_time" content="2026-11-25">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BlogPosting",
+ "headline": "How this site was built — and shipped",
+ "description": "A family sigil, a 3×3 ink map, a tiny build script and one GitHub Pages branch: how the OKalme website was designed, built with AI and deployed with Cloudflare.",
+ "inLanguage": "en",
+ "datePublished": "2026-11-25",
+ "dateModified": "2026-11-25",
+ "url": "https://okalme.site/journal/how-this-site-was-built/",
+ "mainEntityOfPage": "https://okalme.site/journal/how-this-site-was-built/",
+ "image": "https://okalme.site/assets/img/og.jpg",
+ "keywords": "OKalme website, GitHub Pages, Cloudflare, static site, AI-assisted web design, Claude",
+ "author": {
+  "@type": "MusicGroup",
+  "@id": "https://okalme.site/#okalme",
+  "name": "OKalme",
+  "url": "https://okalme.site/",
+  "logo": "https://okalme.site/assets/img/sigil.png"
+ },
+ "publisher": {
+  "@type": "MusicGroup",
+  "@id": "https://okalme.site/#okalme",
+  "name": "OKalme",
+  "url": "https://okalme.site/",
+  "logo": "https://okalme.site/assets/img/sigil.png"
+ },
+ "isPartOf": {
+  "@type": "Blog",
+  "name": "OKalme Journal",
+  "url": "https://okalme.site/#/journal"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "OKalme",
+   "item": "https://okalme.site/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Journal",
+   "item": "https://okalme.site/#/journal"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How this site was built — and shipped",
+   "item": "https://okalme.site/journal/how-this-site-was-built/"
+  }
+ ]
+}
+</script>
+</head>
+<body class="post-page">
+<header class="ui-top">
+  <a class="brand" href="/" aria-label="OKalme"><img src="/assets/img/favicon.png" alt="" width="34" height="34"><span>OKalme</span></a>
+  <div class="lang" role="group" aria-label="Language">
+    <a href="/journal/how-this-site-was-built/" hreflang="en" lang="en" aria-current="true">EN</a>
+    <a href="/fr/journal/how-this-site-was-built/" hreflang="fr" lang="fr">FR</a>
+  </div>
+</header>
+<main class="post-wrap paper">
+<article class="post-body" data-slug="how-this-site-was-built">
+<p class="eyebrow">Journal · Workshop note · November 25, 2026</p>
+<h1>How this site was built — and shipped</h1>
+<p class="lead">OKalme is our family's creative label. It needed a home for an album, a game and the story of how we make things. Here's how that home was drawn, coded and put online.</p>
+  <h2>1. The palette came from the family sigil</h2>
+  <p>Everything starts from the OKalme sigil: ink navy, sun gold, ember orange, two greens and the white of the mosaic letters. The album covers added the rest of the vocabulary — rice paper, brushed ink and a little digital glitch. Old tools, new tools. That's pretty much the whole brand.</p>
+  <h2>2. No top-down page: an ink map</h2>
+  <p>The site is a 3×3 world and you are the camera. The sigil is the sun in the middle; every project sits in a direction: the album to the east, the game to the north, the workshop to the south, this journal to the west. Travel with the arrows, WASD, a swipe or the compass, and press <kbd>M</kbd> to zoom out and see the whole map.</p>
+  <p>Without JavaScript, the same page falls back to a classic scroll — friendly for search engines, screen readers and grumpy browsers.</p>
+  <h2>3. A deliberately boring stack</h2>
+  <ul>
+    <li>One page, one CSS file, two small JavaScript files and a folder of images. No framework. A tiny Python script turns each story into its own page, in both languages, so search engines and AI assistants can read every one of them.</li>
+    <li>On the map, places live in the URL hash (<code>#/album</code>); every story also has a real address, like <code>/journal/how-this-site-was-built/</code>.</li>
+    <li>English by default, French one click away: every string sits in a small dictionary.</li>
+  </ul>
+  <h2>4. Built with AI, directed by a human</h2>
+  <p>The code was drafted in a conversation with Claude. I described what I wanted, it proposed, I corrected — mostly by saying “more orange”. Same rule as for the music: we'd rather tell you how it's made than let you guess.</p>
+  <h2>5. Shipping it</h2>
+<pre><code># 1. Publish the files on a gh-pages branch
+git init && git checkout -b gh-pages
+git add . && git commit -m "OKalme v0"
+git remote add origin git@github.com:olivierlizotte/okalme.git
+git push -u origin gh-pages
+
+# 2. GitHub › Settings › Pages
+#    Source: gh-pages / (root) — custom domain: okalme.site
+#    (the CNAME file is already in the repo) — tick “Enforce HTTPS”
+
+# 3. Cloudflare › DNS for okalme.site
+#    A  @    185.199.108.153   (also .109, .110, .111)
+#    CNAME www  olivierlizotte.github.io
+#    Keep “DNS only” until GitHub issues the certificate,
+#    then SSL/TLS mode: Full</code></pre>
+  <p>That's it: push to <code>gh-pages</code> and the site updates a minute later.</p>
+  <h2>What's next</h2>
+  <p>The album release, the first Geared Spirit devlog, and real notes in the Workshop. See you on the map.</p>
+</article>
+<nav class="post-nav"><a href="/#/journal">← Back to the map</a><a href="/#/album">The album</a></nav>
+</main>
+<footer class="post-foot">© 2026 OKalme · <a href="/">okalme.site</a></footer>
+</body>
+</html>

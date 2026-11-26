@@ -1,0 +1,33 @@
+  <p class="lead">OKalme is our family's creative label. It needed a home for an album, a game and the story of how we make things. Here's how that home was drawn, coded and put online.</p>
+  <h2>1. The palette came from the family sigil</h2>
+  <p>Everything starts from the OKalme sigil: ink navy, sun gold, ember orange, two greens and the white of the mosaic letters. The album covers added the rest of the vocabulary — rice paper, brushed ink and a little digital glitch. Old tools, new tools. That's pretty much the whole brand.</p>
+  <h2>2. No top-down page: an ink map</h2>
+  <p>The site is a 3×3 world and you are the camera. The sigil is the sun in the middle; every project sits in a direction: the album to the east, the game to the north, the workshop to the south, this journal to the west. Travel with the arrows, WASD, a swipe or the compass, and press <kbd>M</kbd> to zoom out and see the whole map.</p>
+  <p>Without JavaScript, the same page falls back to a classic scroll — friendly for search engines, screen readers and grumpy browsers.</p>
+  <h2>3. A deliberately boring stack</h2>
+  <ul>
+    <li>One page, one CSS file, two small JavaScript files and a folder of images. No framework. A tiny Python script turns each story into its own page, in both languages, so search engines and AI assistants can read every one of them.</li>
+    <li>On the map, places live in the URL hash (<code>#/album</code>); every story also has a real address, like <code>/journal/how-this-site-was-built/</code>.</li>
+    <li>English by default, French one click away: every string sits in a small dictionary.</li>
+  </ul>
+  <h2>4. Built with AI, directed by a human</h2>
+  <p>The code was drafted in a conversation with Claude. I described what I wanted, it proposed, I corrected — mostly by saying “more orange”. Same rule as for the music: we'd rather tell you how it's made than let you guess.</p>
+  <h2>5. Shipping it</h2>
+<pre><code># 1. Publish the files on a gh-pages branch
+git init && git checkout -b gh-pages
+git add . && git commit -m "OKalme v0"
+git remote add origin git@github.com:olivierlizotte/okalme.git
+git push -u origin gh-pages
+
+# 2. GitHub › Settings › Pages
+#    Source: gh-pages / (root) — custom domain: okalme.site
+#    (the CNAME file is already in the repo) — tick “Enforce HTTPS”
+
+# 3. Cloudflare › DNS for okalme.site
+#    A  @    185.199.108.153   (also .109, .110, .111)
+#    CNAME www  olivierlizotte.github.io
+#    Keep “DNS only” until GitHub issues the certificate,
+#    then SSL/TLS mode: Full</code></pre>
+  <p>That's it: push to <code>gh-pages</code> and the site updates a minute later.</p>
+  <h2>What's next</h2>
+  <p>The album release, the first Geared Spirit devlog, and real notes in the Workshop. See you on the map.</p>
