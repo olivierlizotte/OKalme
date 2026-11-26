@@ -19,7 +19,9 @@ Static site for OKalme — no framework, no build step. English by default, Fren
 ## Search engines & AI assistants
 - Each story is a real static page with canonical, hreflang, Open Graph and JSON-LD (BlogPosting + MusicRecording).
 - `robots.txt` explicitly allows Google, Bing, OpenAI, Anthropic, Perplexity and Apple crawlers; `llms.txt` summarizes the site for AI assistants.
-- Submit `https://okalme.site/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- Google Search Console: property `https://okalme.site/` verified (file `googleca1f2260ce614763.html` — never delete it); sitemap submitted.
+- Bing & other IndexNow engines: after each deploy, run `python3 tools/indexnow.py` (key file `6e8b3759eb05a8350a634af676bd26ce.txt` — never delete it).
+- For a new important page, Search Console › URL inspection › Request indexing speeds things up.
 - Cloudflare: make sure AI crawlers are not blocked (Security / AI Crawl Control, "Block AI bots" and managed robots.txt).
 
 ## Deploy (GitHub Pages + Cloudflare)
